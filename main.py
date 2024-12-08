@@ -1,3 +1,7 @@
+# Don't Remove Credit Tg - @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
+# Ask Doubt on telegram @KingVJ01
+
 import os
 import re
 import sys
@@ -6,25 +10,32 @@ import time
 import asyncio
 import requests
 import subprocess
+
 import core as helper
 from utils import progress_bar
-from vars import api_id, api_hash, bot_token
+from vars import API_ID, API_HASH, BOT_TOKEN
 from aiohttp import ClientSession
 from pyromod import listen
 from subprocess import getstatusoutput
+
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from bs4 import BeautifulSoup
 
-bot = Client("bot",
-             bot_token= "8160218853:AAG3RAkZMR3asoAzSUx5b2m290-eTjwoXRo", 
-             api_id= 27679306,
-             api_hash= "d0f390f798eec4ddb9246a00a44b7a3f")
 
+bot = Client(
+    "bot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN)
+
+
+@bot.on_message(filters.command(["start"]))
+async def start(bot: Client, m: Message):
+    await m.reply_text(f"<b>Hello {m.from_user.mention} 馃憢\n\n I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me /Rohit Command And Then Follow Few Steps..\n\nUse /stop to stop any ongoing task.</b>")
 
 #----------CONVERTOR-------------
 
