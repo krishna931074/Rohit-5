@@ -80,7 +80,7 @@ async def restart_handler(_, m):
 
 #-------------TXT Uploader Commands ---------------
 
-@bot.on_message(filters.command(["ROWDY"]))
+@bot.on_message(filters.command(["Rohit"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hey Send txt file**")
     input: Message = await bot.listen(editable.chat.id)
@@ -152,7 +152,7 @@ async def account_login(bot: Client, m: Message):
     raw_text3 = input3.text
     await input3.delete(True)
     if raw_text3 == 'df':
-        CR = "ROWDY❤️"
+        CR = "Rohit❤️"
     else:
         CR = raw_text3
     await editable.edit("Now send the **Thumb url**\nEg : **`https://telegra.ph/file/df5f23cd48e6043828e0e.jpg`**\n\nor Send `no`")
@@ -173,7 +173,7 @@ async def account_login(bot: Client, m: Message):
         count = int(raw_text)
 
     try:
-        await bot.send_message(-1002276233363, f"**•File name** - `{file_name}`({raw_text0})\n**•Total Links Found In TXT** - `{len(links)}`\n**•Starts from** - `{raw_text}`\n**•Resolution** - `{res}`({raw_text2})\n**•Caption** - `{raw_text3}`\n**•Thumbnail** - `{thumb}`")
+        await bot, f"**•File name** - `{file_name}`({raw_text0})\n**•Total Links Found In TXT** - `{len(links)}`\n**•Starts from** - `{raw_text}`\n**•Resolution** - `{res}`({raw_text2})\n**•Caption** - `{raw_text3}`\n**•Thumbnail** - `{thumb}`")
         for i in range(count - 1, len(links)):
             if len(links[i]) != 2 or not links[i][1]:
                 # If the link is empty or not properly formatted, continue to the next iteration
@@ -238,7 +238,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading📥:-**\n\n** Video Name :-** `{name}\n\n╰────⌈**✨❤️ ROWDY ❤️✨**⌋────╯")
+                    prog = await m.reply_text(f"**Downloading📥:-**\n\n** Video Name :-** `{name}\n\n╰────⌈**✨❤️ Rohit ❤️✨**⌋────╯")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
@@ -251,6 +251,6 @@ async def account_login(bot: Client, m: Message):
                 continue
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("DONE BOSS 😎")
+    await m.reply_text("DONE ROHIT BOSS 😎")
 
 bot.run()
